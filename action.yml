@@ -24,6 +24,11 @@ inputs:
     required: true
     default: 'public'
 
+  github_io_branch:
+    description: 'The branch of target github.io repo'
+    required: true
+    default: 'master'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
