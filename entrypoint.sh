@@ -10,7 +10,8 @@ git clone --depth=1 --single-branch --branch ${INPUT_GITHUB_IO_BRANCH} \
   ${DEST_URL} \
   ${DEST_DIR}
 
-cd ${DEST_DIR}
+pwd
+ls -a
 hugo ${INPUT_HUGO_ARGS}
 
 sleep 10
