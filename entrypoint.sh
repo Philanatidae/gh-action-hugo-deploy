@@ -22,7 +22,7 @@ cp -R \
   ${GITHUB_WORKSPACE}/${INPUT_BUILD_DIR}/* \
   ${DEST_DIR}
 
-#cd ${DEST_DIR}
+cd ${DEST_DIR}
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git status
