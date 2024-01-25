@@ -18,11 +18,12 @@ sleep 10
 echo "after sleep; ls -alst"
 ls -alst
 
-cp -R \
-  ${GITHUB_WORKSPACE}/${INPUT_BUILD_DIR}/* \
-  ${DEST_DIR}
+#cp -R \
+#  ${GITHUB_WORKSPACE}/${INPUT_BUILD_DIR}/* \
+#  ${DEST_DIR}
 
 cd ${DEST_DIR}
+ls -alst
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git status
