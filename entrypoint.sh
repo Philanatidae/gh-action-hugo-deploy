@@ -10,8 +10,7 @@ git clone --depth=1 --single-branch --branch ${INPUT_GITHUB_IO_BRANCH} \
   ${DEST_URL} \
   ${DEST_DIR}
 
-pwd
-ls -a
+git config --global --add safe.directory /github/workspace
 hugo ${INPUT_HUGO_ARGS}
 
 sleep 10
