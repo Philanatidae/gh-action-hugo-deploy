@@ -20,9 +20,11 @@ sleep 10
 echo "after sleep; ls -alst"
 ls -alst
 
-#cp -R \
-#  ${GITHUB_WORKSPACE}/${INPUT_BUILD_DIR}/* \
-#  ${DEST_DIR}
+echo "Clean dest repo"
+find "${DEST_DIR}" -type f -not -path "${DEST_DIR}/.git/*" -delete
+
+echo "Copy public to dest repo"
+cp -R ./public/* ${DEST_DIR}
 
 echo "cd into DEST_DIR"
 cd ${DEST_DIR}
