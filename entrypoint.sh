@@ -10,6 +10,7 @@ git clone --depth=1 --single-branch --branch ${INPUT_GITHUB_IO_BRANCH} \
   ${DEST_URL} \
   ${DEST_DIR}
 
+cd ${DEST_DIR}
 hugo ${INPUT_HUGO_ARGS}
 
 sleep 10
@@ -21,7 +22,7 @@ cp -R \
   ${GITHUB_WORKSPACE}/${INPUT_BUILD_DIR}/* \
   ${DEST_DIR}
 
-cd ${DEST_DIR}
+#cd ${DEST_DIR}
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git status
