@@ -25,6 +25,7 @@ find "${DEST_DIR}" -type f -not -path "${DEST_DIR}/.git/*" -delete
 
 echo "Copy public to dest repo"
 cp -R ./public/* ${DEST_DIR}
+cp ./CNAME ${DEST_DIR}/CNAME
 
 echo "cd into DEST_DIR"
 cd ${DEST_DIR}
